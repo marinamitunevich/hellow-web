@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Hello Web</h1>
+<h5>First page</h5>
+<div>
+    <p>Name is: <span th:text= "${userName}"></span></p>
+</div>
+<ul th:each="person : ${lists}">
+    <li th:text="${person.getFirstName()}"></li>
+    <li th:text="${person.getLastName()}"></li>
+    <li th:text="${person.getAge()}"></li>
+</ul>
+<ul>
+    <li>marina</li>
+    <li>marina</li>
+    <li>marina</li>
+</ul>
+
+<div class="collection">
+    <a href="#!" class="collection-item">Alvin</a>
+    <a href="#!" class="collection-item">Alvin</a>
+    <a href="#!" class="collection-item">Alvin</a>
+    <a href="#!" class="collection-item">Alvin</a>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
